@@ -30,7 +30,7 @@
     4.1 Managing Event-Driven Traffic Spikes
     4.2 Proactive Fault Management
     4.3 Environmental Impact Handling
-	4.4 Ultra-Low-Latency Applications
+    4.4 Ultra-Low-Latency Applications
 
 #### 5.	Deployment Method
 
@@ -45,12 +45,12 @@
     6.2 Cloud Infrastructure
     6.3 Networking and Connectivity
 
-**#### 7.	Limitations and Enhancements**
+#### 7.	Limitations and Enhancements
 
     7.1 Current Limitations
     7.2 Proposed Enhancements
 
-**#### 8.	Conclusion**
+#### 8.	Conclusion
 
 ### 1. Introduction
 
