@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logs</title>
+</head>
+<body>
+    <h1>Recent Logs</h1>
+    <ul>
+        {% for log in logs %}
+            <li>{{ log }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Dashboard</a>
+</body>
+</html>

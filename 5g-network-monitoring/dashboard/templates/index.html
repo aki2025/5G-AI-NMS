@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>5G Network Monitoring</title>
+</head>
+<body>
+    <h1>5G Network Monitoring Dashboard</h1>
+    <h2>Latest Prediction</h2>
+    <p>Traffic: {{ prediction.traffic }}</p>
+    <p>Fault: {{ prediction.fault }} (Type: {{ prediction.fault_type }})</p>
+    <p>Health Score: {{ prediction.health_score }}</p>
+    <h2>Recommended Action</h2>
+    <p>{{ action }}</p>
+    <a href="/logs">View Logs</a> | <a href="/feedback">Provide Feedback</a>
+</body>
+</html>

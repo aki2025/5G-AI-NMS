@@ -1,0 +1,28 @@
+{
+    "mapping": {
+        "log_time": "timestamp",
+        "base_station_id": "station_id",
+        "concurrent_users": "users",
+        "ul_traffic": "upload_traffic",
+        "dl_traffic": "download_traffic",
+        "ul_throughput": "upload_throughput",
+        "dl_throughput": "download_throughput",
+        "latency_ms": "latency",
+        "packet_loss_rate": "loss_rate",
+        "rsrp_dbm": "rsrp",
+        "rsrq_db": "rsrq",
+        "sinr_db": "sinr",
+        "cpu_usage": "cpu",
+        "mem_usage": "memory",
+        "urllc_latency": "urllc_lat",
+        "isac_signal": "isac_sig"
+    },
+    "api_keys": {
+        "eventbrite": "your_eventbrite_token",
+        "openweathermap": "your_openweathermap_key",
+        "twitter_consumer_key": "your_twitter_consumer_key",
+        "twitter_consumer_secret": "your_twitter_consumer_secret",
+        "twitter_access_token": "your_twitter_access_token",
+        "twitter_access_token_secret": "your_twitter_access_token_secret"
+    }
+}

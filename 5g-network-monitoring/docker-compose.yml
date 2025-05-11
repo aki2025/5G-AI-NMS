@@ -1,0 +1,38 @@
+version: '3'
+services:
+  federated-server:
+    build: ./federated_learning
+    ports:
+      - "5000:5000"
+  dashboard:
+    build: ./dashboard
+    ports:
+      - "5001:5001"
+  log-ingestion:
+    build: ./agent_code
+    ports:
+      - "5002:5002"
+  preprocessing:
+    build: ./agent_code
+    ports:
+      - "5003:5003"
+  prediction:
+    build: ./agent_code
+    ports:
+      - "5004:5004"
+  action:
+    build: ./agent_code
+    ports:
+      - "5005:5005"
+  feedback:
+    build: ./agent_code
+    ports:
+      - "5006:5006"
+  orchestrator:
+    build: ./agent_code
+    ports:
+      - "5007:5007"
+  kafka:
+    image: apache/kafka
+    ports:
+      - "9092:9092"
