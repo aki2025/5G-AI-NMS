@@ -76,7 +76,7 @@ The system employs a modular, microservices-based architecture for scalability a
     
     **Cloud Layer:** Manages model retraining, federated learning, and operator dashboards.
     
-Here’s a simplified visual representation:
+Here’s a flow representation:
     
     **Edge (MEC Servers):** Logs --> Preprocessing --> Prediction --> Action --> Orchestration --> Feedback
     
