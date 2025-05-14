@@ -92,24 +92,33 @@
     4.	Securely manage AES key and IV in feedback.py (e.g., AWS KMS).
 
 ## Running the system
-      Train models: python model_code/train_models.py.  
-      Start Kafka and microservices: docker-compose up.  
-      Run federated server: python federated_learning/federated_server.py.  
-      Launch dashboard: python dashboard/app.py.  
-      Simulate edge training: python federated_learning/federated_client.py.
+      
+      **Train models**: python model_code/train_models.py.  
+      **Start Kafka and microservices**: docker-compose up.  
+      **Run federated server**: python federated_learning/federated_server.py.  
+      **Launch dashboard: **python dashboard/app.py.  
+      **Simulate edge training**: python federated_learning/federated_client.py.
+
+## Deployment Guide
+	**Edge**: Deploy microservices (log_ingestion.py, orchestrator.py, etc.) and federated_client.py on MEC servers (e.g., NVIDIA A100).
+	**Cloud**: Run federated_server.py, retrain_models.py, and dashboard on AWS/Azure.
+	**Kubernetes**: Use for orchestration, auto-scaling (HPA with CPU > 80%).
+	**Security**: Enable TLS, monitor with Wazuh.
+	**Latency**: Target ~50-100 ms per cycle for URLLC compatibility.
 
 ## Latency Performance:
 
-      Log Ingestion: ~10-50 ms (cached external data).  
-      Preprocessing + Fusion: ~10-15 ms (transformer inference).  
-      Prediction + Online Learning: ~20-30 ms (LSTM + Autoencoder + updates).  
-      Action + RL: ~10-15 ms (DQN inference).  
-      Orchestration: ~50-100 ms (ONAP API call).  
-      Total: ~60-110 ms per cycle, suitable for URLLC and general monitoring.
+      **Log Ingestion**: ~10-50 ms (cached external data).  
+      **Preprocessing** + Fusion: ~10-15 ms (transformer inference).  
+      **Prediction + Online Learning**: ~20-30 ms (LSTM + Autoencoder + updates).  
+      **Action + RL**: ~10-15 ms (DQN inference).  
+      **Orchestration**: ~50-100 ms (ONAP API call).  
+      **Total** : ~60-110 ms per cycle, suitable for URLLC and general monitoring.
 
 ## Use Cases
-	Protest Congestion: Fuses Twitter/X data and logs to predict traffic spike, uses RL to select "increase capacity," executed via ONAP.
-	Hardware Fault: Detects CPU issue via SHAP, recommends "check power supply," updates model online.
-	Weather Impact: Adjusts QoS for rain, reroutes traffic automatically.
+
+ 	**Protest Congestion:** Fuses Twitter/X data and logs to predict traffic spike, uses RL to select "increase capacity," executed via ONAP.
+	**Hardware Fault:** Detects CPU issue via SHAP, recommends "check power supply," updates model online.
+	**Weather Impact**: Adjusts QoS for rain, reroutes traffic automatically.
 
 
